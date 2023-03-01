@@ -10,9 +10,12 @@
         "test1": "node bin/log.js test/data/test1.js -o ./output.js",
         "test2": "node bin/log.js test/data/test2.js -o ./output.js",
         "test3": "node bin/log.js test/data/test3.js -o ./output.js",
+        "test4": "node bin/log.js test/data/test4.js -o ./output.js",
         "test": "mocha test/test.mjs",
         "cov": "nyc npm test",
-        "cov2": "nyc --reporter=html --reporter=text --report-dir docs mocha"
+        "cov2": "nyc --reporter=html --reporter=text --report-dir docs mocha",
+        "doc":  "documentation readme ./src/** --section=API",
+        "doc2": "documentation build ./src/** -f html -o docs"
     },
     "dependencies": {
         "acorn": "^8.8.2",
@@ -25,7 +28,8 @@
     "version": "1.5.0",
     "devDependencies": {
         "mocha": "^10.2.0",
-        "nyc": "*"
+        "nyc": "*",
+        "documentation": "*"
     },
     "main": "src/logging-espree.js"
 }
