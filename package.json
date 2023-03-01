@@ -7,7 +7,9 @@
         "funlog": "bin/log.js"
     },
     "scripts": {
-        "test1": "node bin/log.js test/data/test1.js -o ./output.js"
+        "test1": "node bin/log.js test/data/test1.js -o ./output.js",
+        "test2": "node bin/log.js test/data/test2.js -o ./output.js",
+        "test3": "node bin/log.js test/data/test3.js -o ./output.js"
     },
     "dependencies": {
         "acorn": "^8.8.2",

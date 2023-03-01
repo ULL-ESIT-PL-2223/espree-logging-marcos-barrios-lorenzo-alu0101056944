@@ -14,7 +14,8 @@ export function addLogging(code) {
     estraverse.traverse(ast, {
         enter: function(node, parent) {
             if (node.type === 'FunctionDeclaration' ||
-                node.type === 'FunctionExpression') {
+                node.type === 'FunctionExpression' ||
+                node.type === 'ArrowFunctionExpression') {
                 addBeforeCode(node);
             }
         }
