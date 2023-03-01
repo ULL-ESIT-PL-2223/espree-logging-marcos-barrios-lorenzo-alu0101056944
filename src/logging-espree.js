@@ -24,7 +24,8 @@ export function addLogging(code) {
 
 function addBeforeCode(node) {
   var name = node.id ? node.id.name : '<anonymous function>';
-  var beforeCode = "console.log('Entering " + name + "()');";
+  const params = node.params.map(id => id.name);
+  var beforeCode = "console.log('Entering " + name + `(${params})');`;
   var beforeNodes = espree.parse(beforeCode).body;
   node.body.body = beforeNodes.concat(node.body.body);
 }

@@ -3,7 +3,9 @@
 
 ## Resumen de lo aprendido
 
-...
+### Estructura de el arbol AST
+
+Un nodo <code>FunctionDeclaration</code> tiene un una propiedad *body*, una propiedad *params* y una propiedad *args* y el *body* suele ser un <code>BlockStatement</code> cuyo *body* es un array. Dentro de ese array podemos meter otros nodos que queramos, capacidad que aplicamos para incluir un nodo <code>CallStatement</code> equivalente a <code>console.log(...)</code>
 
 ## Indicar los valores de los argumentos
 
