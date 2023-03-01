@@ -83,4 +83,10 @@ const ast = espree.parse(code, {ecmaVersion: 6, loc: true /* activamos el objeto
 
 ## Tests and Covering
 
-...
+### Test results with mocha
+
+![sucessful test](docs/successful_test.PNG)
+
+### Code coverage using <code>nyc</code>
+
+![nyc result](docs/nyc.PNG)

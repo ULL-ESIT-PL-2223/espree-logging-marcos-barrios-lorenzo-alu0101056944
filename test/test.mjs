@@ -15,6 +15,10 @@ const Test = Tst.map(t => ({
 })
 )
 
+/**
+ * @summary Removes all space for consistent comparisons
+ * @param {string} s input string
+ */
 function removeSpaces(s) {
   return s.replace(/\s/g, '');
 }
