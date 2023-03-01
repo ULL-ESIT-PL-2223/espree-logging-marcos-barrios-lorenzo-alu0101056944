@@ -10,7 +10,7 @@ export async function transpile(inputFile, outputFile) {
 }
 
 export function addLogging(code) {
-  const ast = espree.parse(code);
+  const ast = espree.parse(code, {ecmaVersion: 6});
     estraverse.traverse(ast, {
         enter: function(node, parent) {
             if (node.type === 'FunctionDeclaration' ||
