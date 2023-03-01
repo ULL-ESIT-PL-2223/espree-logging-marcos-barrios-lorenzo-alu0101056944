@@ -9,7 +9,7 @@ Un nodo <code>FunctionDeclaration</code> tiene un una propiedad *body*, una prop
 
 ## Indicar los valores de los argumentos
 
-Se ha modificado el código de `logging-espree.js` para que el log también indique los valores de los argumentos que se pasaron a la función. 
+Se ha modificado el código de `logging-espree.js` para que el log también indique los valores de los argumentos que se pasaron a la función.
 Ejemplo:
 
 ```javascript

@@ -6,7 +6,7 @@ import * as fs from "fs/promises";
 export async function transpile(inputFile, outputFile) {
   const CODE = await fs.readFile(inputFile, 'utf-8');
   const CODE_LOGGED = addLogging(CODE);
-  await writeFile(outputFile, CODE_LOGGED);
+  await fs.writeFile(outputFile, CODE_LOGGED);
 }
 
 export function addLogging(code) {

@@ -7,7 +7,7 @@
         "funlog": "bin/log.js"
     },
     "scripts": {
-        "fill": "your scripts here"
+        "test1": "node bin/log.js test/data/test1.js -o ./output.txt"
     },
     "dependencies": {
         "acorn": "^8.8.2",
