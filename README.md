@@ -36,6 +36,34 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 *   `node` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** of the AST
 
+## Ejecutable
+
+El ejecutable <code>bin/log.js</code> puede ser utilizado de la siguiente forma:
+
+```bash
+Arguments:
+  filename                 file with the original code
+
+Options:
+  -V, --version            output the version number
+  -o, --output <filename>  file in which to write the output
+  -h, --help               display help for command
+```
+
+Ejemplo de ejecución:
+
+```bash
+npx funlog test/data/test1.js -o output.txt
+```
+
+## Instalación
+
+Para instalar utilizar el siguiente comando:
+
+```bash
+npm i
+```
+
 ## Resumen de lo aprendido
 
 ### Estructura de el arbol AST
