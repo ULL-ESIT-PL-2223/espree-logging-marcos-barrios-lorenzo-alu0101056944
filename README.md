@@ -152,3 +152,64 @@ const ast = espree.parse(code, {ecmaVersion: 6, loc: true /* activamos el objeto
 ### Code coverage using <code>nyc</code>
 
 ![nyc result](docs/nyc.PNG)
+
+### Prueba de que funciona el modulo externamente
+
+En una carpeta aparte <code>espree-logging-test</code> se tiene el archivo *package.json* siguiente:
+
+```json
+  {
+  "name": "espree-logging-test",
+  "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+  "description": "Adds logs to javascript code",
+  "type": "module",
+  "dependencies": {
+      "@alu0101056944/espree-logging": "*"
+  },
+  "version": "1.5.2"
+}
+```
+
+Se crea un archivo *index.js* con el siguiente contenido:
+
+```js
+import { addLogging } from '@alu0101056944/espree-logging';
+
+const code = 'function foo() {}';
+const output_code = addLogging(code);
+console.log(output_code);
+```
+
+el resultado es:
+
+![resultado uso modulo externo](docs/resultado_modulo.PNG)
+
+Además, se puede comprobar que efectivamente, se puede utilizar el ejecutable:
+
+![uso ejecutable](docs/se%20puede%20usar%20el%20ejecutable.PNG)
+
+Con *test1.js* igual a:
+
+```js
+function foo(a, b) {   
+    var x = 'blah';   
+    var y = (function () {
+      return 3;
+    })();
+  }     
+foo(1, 'wut', 3);
+```
+
+Y la salida que devuelve es:
+
+```js
+function foo(a, b) {
+    console.log(`Entering foo(${ a },${ b }) at line 1`);
+    var x = 'blah';
+    var y = function () {
+        console.log(`Entering <anonymous function>() at line 3`);
+        return 3;
+    }();
+}
+foo(1, 'wut', 3);
+```
